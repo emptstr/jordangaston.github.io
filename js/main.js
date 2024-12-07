@@ -6,8 +6,9 @@ window.sr = ScrollReveal({
   viewFactor: 0.3,
 });
 
-sr.reveal('.intro-text');
-sr.reveal('.intro-contact');
+window.sr.reveal('#intro-greeting');
+window.sr.reveal('#intro-text');
+window.sr.reveal('#intro-contact');
 
 document.addEventListener('DOMContentLoaded', function () {
   const hand = document.querySelector('.waving-hand');
