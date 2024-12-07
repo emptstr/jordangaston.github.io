@@ -1,16 +1,19 @@
-window.sr = ScrollReveal({
-  reset: false,
-  duration: 600,
-  easing: 'cubic-bezier(.694,0,.335,1)',
-  scale: 1,
-  viewFactor: 0.3,
-});
-
-window.sr.reveal('#intro-greeting');
-window.sr.reveal('#intro-text');
-window.sr.reveal('#intro-contact');
 
 document.addEventListener('DOMContentLoaded', function () {
+  const sr= ScrollReveal({
+    reset: false,
+    duration: 800,
+    easing: 'cubic-bezier(.694,0,.335,1)',
+    scale: 1,
+    viewFactor: 0.3,
+  });
+  sr.reveal('#intro-greeting');
+  sr.reveal('#intro-text', { viewFactor: 1.0 });
+  sr.reveal('#intro-contact');
+  sr.reveal('.experience', {
+
+  });
+
   const hand = document.querySelector('.waving-hand');
 
   function waveOnLoad() {
