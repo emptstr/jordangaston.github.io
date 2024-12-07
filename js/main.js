@@ -1,18 +1,16 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const sr= ScrollReveal({
-    reset: true,
-    duration: 800,
+    reset: false,
+    duration: 700,
     easing: 'cubic-bezier(.694,0,.335,1)',
     scale: 1,
-    viewFactor: 0.3,
+    viewFactor: 0.7,
   });
   sr.reveal('#intro-greeting');
-  sr.reveal('#intro-text', { viewFactor: 0.8 });
+  sr.reveal('#intro-text');
   sr.reveal('#intro-contact');
-  sr.reveal('.experience', {
-
-  });
+  sr.reveal('.experience');
 
   const hand = document.querySelector('.waving-hand');
 
