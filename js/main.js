@@ -1,6 +1,17 @@
+window.sr = ScrollReveal({
+  reset: false,
+  duration: 600,
+  easing: 'cubic-bezier(.694,0,.335,1)',
+  scale: 1,
+  viewFactor: 0.3,
+});
+
+sr.reveal('.intro-text');
+sr.reveal('.intro-contact');
+
 document.addEventListener('DOMContentLoaded', function () {
   const hand = document.querySelector('.waving-hand');
-  
+
   function waveOnLoad() {
     hand.classList.add('wave');
     setTimeout(function () {
