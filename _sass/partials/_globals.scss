@@ -1,0 +1,152 @@
+$measure: 125ch;
+$large: 2.5rem;
+$medium: 1.5rem;
+
+* {
+    font-family: Apercu, "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-size: $large;
+    max-width: 30ch;
+    line-height: 5rem;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stack>*+* {
+    margin-block-start: 1.5rem;
+}
+
+.center {
+    margin-inline: auto;
+    max-inline-size: $measure;
+    box-sizing: content-box;
+}
+
+.cover {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+}
+
+.cover>* {
+    margin-block: 8rem;
+}
+
+.cover>:first-child:not(h2) {
+    padding-block-start: 11rem;
+    margin-block-start: 0;
+}
+
+.cover>:last-child:not(h2) {
+    padding-block-end: 11rem;
+    margin-block-end: 0;
+}
+
+.cover h2 {
+    margin-block: 0;
+}
+
+.icon {
+    display: inline-block;
+    background-size: contain;
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.waving-hand {
+    background-image: url('../../img/emojis/waving-hand.png');
+    width: $large;
+    height: $large;
+    margin: 0 0.5rem;
+    vertical-align: text-top;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    cursor: pointer;
+
+    &.wave {
+        animation-name: wave;
+    }
+ 
+    @keyframes wave {
+        from {
+            transform: none;
+        }
+
+        15% {
+            transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        }
+
+        30% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+        }
+
+        45% {
+            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        }
+
+        60% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+        }
+
+        75% {
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+        }
+
+        to {
+            transform: none;
+        }
+    }
+
+}
+
+.pointing-hand {
+    background-image: url('../../img/emojis/pointing-hand.png');
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0 0.5rem;
+    vertical-align: text-bottom;
+}
+
+.highlighted-link {
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 3px;
+    text-decoration: none;
+    box-shadow: inset 0 -3px 0 $link-color;
+
+    &:hover {
+        box-shadow: inset 0 -33px 0 0 $link-color;
+        color: $text-color;
+    }
+}
+
+.experience {
+    justify-content: space-between;
+    width: 75ch;
+}
