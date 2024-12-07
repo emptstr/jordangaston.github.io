@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const sr= ScrollReveal({
-    reset: false,
+    reset: true,
     duration: 800,
     easing: 'cubic-bezier(.694,0,.335,1)',
     scale: 1,
