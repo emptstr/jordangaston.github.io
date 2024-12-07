@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     viewFactor: 0.3,
   });
   sr.reveal('#intro-greeting');
-  sr.reveal('#intro-text', { viewFactor: 1.0 });
+  sr.reveal('#intro-text', { viewFactor: 0.8 });
   sr.reveal('#intro-contact');
   sr.reveal('.experience', {
 
