@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     duration: 700,
     easing: 'cubic-bezier(.694,0,.335,1)',
     scale: 1,
-    viewFactor: 0.4,
+    viewFactor: 0.3,
   });
   sr.reveal('#intro-greeting');
   sr.reveal('#intro-text');
