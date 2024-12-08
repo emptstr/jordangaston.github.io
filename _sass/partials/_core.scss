@@ -38,6 +38,19 @@
     font-weight: $bold-font-weight;
 }
 
+.project-link {
+    color: $primary-100;
+    font-weight: $bold-font-weight;
+    font-size: $font-size-mediumer;
+    display: inline-block;
+    text-decoration: none;
+    margin-block: $spacing-small;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
 .tag {
     padding: 2px 7px;
     border-radius: 3px;
@@ -87,4 +100,7 @@ footer {
     font-size: $font-size-mediumer;
     text-decoration: none;
     margin-right: $spacing-medium;
+    &:hover {
+        text-decoration: underline;
+    }
 }
