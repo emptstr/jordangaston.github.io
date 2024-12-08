@@ -65,3 +65,26 @@
     color: $primary-400;
     font-size: $font-size;
 }
+
+footer {
+    margin: $spacing-medium;
+    padding: $spacing-medium;
+    justify-content: baseline;
+}
+
+.copyright {
+    margin-top: $spacing-smallest;
+    font-weight: $bold-font-weight;
+}
+
+.socials {
+    gap: $spacing;
+}
+
+.social {
+    color: $primary-100;
+    font-weight: $bold-font-weight;
+    font-size: $font-size-mediumer;
+    text-decoration: none;
+    margin-right: $spacing-medium;
+}

@@ -103,3 +103,24 @@
     vertical-align: text-bottom;
     @include pushable;
 }
+
+.pointing-up-hand {
+    transition: all 0.2s ease-in-out;
+    &:hover,
+    &:focus {
+        transform: translateY(-10px);
+    }
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 48px;
+    height: 40px;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    img {
+        width: 100%;
+    }
+}

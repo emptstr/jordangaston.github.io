@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('#intro-contact');
   sr.reveal('.cover');
   sr.reveal('.job');
+  sr.reveal('.project');
+  sr.reveal('.social');
+  sr.reveal('.copyright');
   sr.reveal('.pointing-down-hand', {
     afterReveal: function () {
       const hands = document.querySelectorAll('.pointing-down-hand');
@@ -44,5 +47,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   hand.addEventListener('mouseout', function () {
     hand.classList.remove('wave');
+  });
+
+  const introHeight = document.querySelector('#intro').offsetHeight;
+  const topButton = document.querySelector('.pointing-up-hand');
+  const $topButton = $('.pointing-up-hand');
+
+  window.addEventListener(
+    'scroll',
+    function() {
+      if (window.scrollY > introHeight) {
+        $topButton.fadeIn();
+      } else {
+        $topButton.fadeOut();
+      }
+    },
+    false
+  );
+
+  topButton.addEventListener('click', function() {
+    $('html, body').animate({ scrollTop: 0 }, 500);
   });
 });
