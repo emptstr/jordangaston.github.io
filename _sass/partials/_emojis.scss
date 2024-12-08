@@ -1,0 +1,105 @@
+@mixin wavable {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    &.wave {
+        animation-name: wave;
+    }
+
+    @keyframes wave {
+        from {
+            transform: none;
+        }
+
+        15% {
+            transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        }
+
+        30% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+        }
+
+        45% {
+            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        }
+
+        60% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+        }
+
+        75% {
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+        }
+
+        to {
+            transform: none;
+        }
+    }
+}
+
+@mixin pushable {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    &.push {
+        animation-name: push;
+    }
+
+    @keyframes push {
+        from {
+            transform: none;
+        }
+
+        15% {
+            transform: translate3d(0, 5%, 0);
+        }
+
+        30% {
+            transform: translate3d(0, -3%, 0);
+        }
+
+        45% {
+            transform: translate3d(0, 3%, 0);
+        }
+
+        60% {
+            transform: translate3d(0, -2%, 0);
+        }
+
+        75% {
+            transform: translate3d(0, 2%, 0);
+        }
+
+        to {
+            transform: none;
+        }
+    }
+}
+
+.waving-hand {
+    background-image: url('../../img/emojis/waving-hand.png');
+    width: $large;
+    height: $large;
+    margin: 0 $spacing-smallest;
+    cursor: pointer;
+    @include wavable;
+}
+
+.pointing-hand {
+    background-image: url('../../img/emojis/pointing-hand.png');
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0 0.5rem;
+    vertical-align: text-bottom;
+}
+
+.pointing-down-hand {
+    background-image: url('../../img/emojis/pointing-down-hand.png');
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    margin-top: 0;
+    margin-left: $spacing-xxlarger;
+    vertical-align: text-bottom;
+    @include pushable;
+}

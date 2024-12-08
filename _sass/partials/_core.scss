@@ -1,0 +1,51 @@
+.job {
+    align-items: flex-start;
+    width: 100%;
+}
+
+.title>*+* {
+    align-items: flex-start;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.content {
+    max-width: $spacing-xxlargest;
+    width: 100%;
+}
+
+.company {
+    color: $heading-color;
+    font-weight: 500;
+}
+
+.date {
+    color: #ACACAC;
+    font-weight: 300;
+}
+
+.role {
+    font-weight: 400;
+}
+
+.tag {
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: $primary;
+    border: 1px solid $primary;
+    background: transparent;
+    display: inline-block;
+}
+
+.tags {
+    gap: 0.65rem;
+    justify-content: flex-start;
+}
+
+.project {
+    width: 100%;
+    border-radius: 10px;
+    color: $link-color;
+    border: 1px solid $gray-500;
+    padding: $spacing;
+}

@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const sr= ScrollReveal({
-    reset: false,
+    reset: true,
     duration: 700,
     easing: 'cubic-bezier(.694,0,.335,1)',
     scale: 1,
@@ -10,7 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('#intro-greeting');
   sr.reveal('#intro-text');
   sr.reveal('#intro-contact');
-  sr.reveal('.experience');
+  sr.reveal('.cover');
+  sr.reveal('.job');
+  sr.reveal('.pointing-down-hand', {
+    afterReveal: function () {
+      const hand = document.querySelector('.pointing-down-hand');
+      hand.classList.add('push');
+      setTimeout(function () {
+        hand.classList.remove('push');
+      }, 5000);
+    }
+  });
 
   const hand = document.querySelector('.waving-hand');
 

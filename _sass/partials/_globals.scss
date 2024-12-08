@@ -2,27 +2,88 @@ $measure: 125ch;
 $large: 2.5rem;
 $medium: 1.5rem;
 
+$font-size-smallest: 12px;
+$font-size-small: 14px;
+$font-size: 16px;
+$font-size-medium: 18px;
+$font-size-mediumer: 20px;
+$font-size-mediumest: 24px;
+$font-size-large: 32px;
+$font-size-larger: 48px;
+$font-size-largest: 60px;
+
+$normal-font-weight: 400;
+$bold-font-weight: 700;
+
+$background-color: #171c27;
+
+$primary: #3498db;
+$primary-50: #ebf5fb;
+$primary-100: #d6eaf8;
+$primary-200: #aed6f1;
+$primary-300: #85c1e9;
+$primary-400: #5dade2;
+$primary-500: $primary;
+$primary-600: #2e86c1;
+$primary-700: #2874a6;
+$primary-800: #21618c;
+$primary-900: #1b4f72;
+
+$gray: #7f8c8d;
+$gray-50: #f2f4f4;
+$gray-100: #e5e8e8;
+$gray-200: #ccd1d1;
+$gray-300: #b2babb;
+$gray-400: #99a3a4;
+$gray-500: #7f8c8d;
+$gray-600: #707b7c;
+$gray-700: #616a6b;
+$gray-800: #515a5a;
+$gray-900: #424949;
+
+$spacing-smallest: 4px;
+$spacing-smaller: 8px;
+$spacing-small: 16px;
+$spacing: 16px;
+$spacing-medium: 24px;
+$spacing-mediumer: 32px;
+$spacing-mediumest: 48px;
+$spacing-large: 64px;
+$spacing-larger: 96px;
+$spacing-largest: 128px;
+$spacing-xlarge: 192px;
+$spacing-xlargeer: 256px;
+$spacing-xlargest: 400px;
+$spacing-xxlarge: 512px;
+$spacing-xxlarger: 680px;
+$spacing-xxlargest: 768px;
+
+
 * {
     font-family: Apercu, "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    color: $text-color;
+    font-weight: $normal-font-weight;
+    color: $gray-100;
     background-color: $background-color;
     box-sizing: border-box;
 }
 
-h1,
-h2 {
-    font-size: $large;
-    max-width: 30ch;
+strong {
+    font-weight: $bold-font-weight;
+}
+
+h1, h2 {
+    font-size: $font-size-larger;
+    max-width: $spacing-xxlargest;
     line-height: 5rem;
+    color: $heading-color;
 }
 
 h3 {
-    font-weight: 400;
+    font-size: $font-size-mediumer; 
 }
 
-strong {
-    font-weight: 700;
+p {
+    color: $gray-200
 }
 
 .stack {
@@ -32,32 +93,31 @@ strong {
 }
 
 .stack>*+* {
-    margin-block-start: 1.5rem;
+    margin-block-start: $spacing-medium;
 }
 
 .center {
     margin-inline: auto;
-    max-inline-size: $measure;
+    max-inline-size: $spacing-xxlargest;
     box-sizing: content-box;
 }
 
 .cover {
     display: flex;
     flex-direction: column;
-    padding: 0rem;
 }
 
 .cover>* {
-    margin-block: 8rem;
+    margin-block: $spacing-larger;
 }
 
 .cover>:first-child:not(h2) {
-    padding-block-start: 11rem;
+    padding-block-start: $spacing-xlarge;
     margin-block-start: 0;
 }
 
 .cover>:last-child:not(h2) {
-    padding-block-end: 11rem;
+    padding-block-end: $spacing-xlarge;
     margin-block-end: 0;
 }
 
@@ -73,63 +133,15 @@ strong {
 .cluster {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: $spacing;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.waving-hand {
-    background-image: url('../../img/emojis/waving-hand.png');
-    width: $large;
-    height: $large;
-    margin: 0 0.5rem;
-    vertical-align: text-top;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    cursor: pointer;
-
-    &.wave {
-        animation-name: wave;
-    }
- 
-    @keyframes wave {
-        from {
-            transform: none;
-        }
-
-        15% {
-            transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
-        }
-
-        30% {
-            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
-        }
-
-        45% {
-            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
-        }
-
-        60% {
-            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
-        }
-
-        75% {
-            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
-        }
-
-        to {
-            transform: none;
-        }
-    }
-
-}
-
-.pointing-hand {
-    background-image: url('../../img/emojis/pointing-hand.png');
-    width: 1.75rem;
-    height: 1.75rem;
-    margin: 0 0.5rem;
-    vertical-align: text-bottom;
+.grid {
+    display: grid;
+    grid-gap: $spacing;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 }
 
 .highlighted-link {
@@ -138,10 +150,14 @@ strong {
     display: inline-block;
     padding: 2px 3px;
     text-decoration: none;
-    box-shadow: inset 0 -3px 0 $link-color;
+    box-shadow: inset 0 -3px 0 $primary;
 
     &:hover {
-        box-shadow: inset 0 -33px 0 0 $link-color;
-        color: $text-color;
+        box-shadow: inset 0 -33px 0 0 $primary;
+        color: $gray-100;
     }
+}
+
+.primary>*+* {
+    margin-block-start: $spacing-xlargeer;
 }
