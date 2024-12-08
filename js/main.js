@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
   sr.reveal('.job');
   sr.reveal('.pointing-down-hand', {
     afterReveal: function () {
-      const hand = document.querySelector('.pointing-down-hand');
-      hand.classList.add('push');
-      setTimeout(function () {
+      const hands = document.querySelectorAll('.pointing-down-hand');
+      hands.forEach(hand => {
+        hand.classList.add('push');
+        setTimeout(function () {
         hand.classList.remove('push');
-      }, 5000);
+        }, 5000);
+      });
     }
   });
 
