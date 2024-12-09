@@ -26,6 +26,9 @@
 .company {
     color: $primary-400;
     font-size: $font-size-mediumer;
+    text-shadow: 0 -0.25px 0.25px $primary-300;
+    text-shadow: 0 0.25px 0.5px $gray-900;
+    text-shadow: 0 0.25px 0.5px $gray-800;
 }
 
 .date {
@@ -36,6 +39,9 @@
 .role {
     color: $primary-100;
     font-weight: $bold-font-weight;
+    text-shadow: 0 -0.25px 0.25px $gray-50;
+    text-shadow: 0 0.25px 0.5px $gray-900;
+    text-shadow: 0 0.25px 0.5px $gray-800;
 }
 
 .project-link {
@@ -88,6 +94,9 @@ footer {
 .copyright {
     margin-top: $spacing-smallest;
     font-weight: $bold-font-weight;
+    text-shadow: 0 -0.25px 0.25px $primary-50;
+    text-shadow: 0 0.25px 0.5px $gray-900;
+    text-shadow: 0 0.25px 0.5px $gray-800;
 }
 
 .socials {
@@ -103,4 +112,19 @@ footer {
     &:hover {
         text-decoration: underline;
     }
+    text-shadow: 0 -0.25px 0.25px $primary-50;
+    text-shadow: 0 0.25px 0.5px $gray-900;
+    text-shadow: 0 0.25px 0.5px $gray-800;
+}
+
+.primary-text {
+    text-shadow: 0 -1.0px 1px $gray-50;
+    text-shadow: 0 1.0px 2px $gray-900;
+    text-shadow: 0 1.0px 2px $gray-800;
+}
+
+.secondary-text {
+    text-shadow: 0 -0.25px 0.25px $gray-50;
+    text-shadow: 0 0.25px 0.5px $gray-900;
+    text-shadow: 0 0.25px 0.5px $gray-800;
 }

@@ -15,7 +15,7 @@ $font-size-largest: 60px;
 $normal-font-weight: 400;
 $bold-font-weight: 700;
 
-$background-color: #171c27;
+$background-gradient: linear-gradient(to right, #171c27 0%, #1a1727 100%);
 
 $primary: #3498db;
 $primary-50: #ebf5fb;
@@ -63,8 +63,11 @@ $spacing-xxlargest: 768px;
     font-family: Apercu, "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     font-weight: $normal-font-weight;
     color: $gray-100;
-    background-color: $background-color;
     box-sizing: border-box;
+}
+
+body {
+    background: $background-gradient;
 }
 
 strong {
@@ -75,11 +78,10 @@ h1, h2 {
     font-size: $font-size-larger;
     max-width: $spacing-xxlargest;
     line-height: 5rem;
-    color: $heading-color;
 }
 
 h3 {
-    font-size: $font-size-mediumer; 
+    font-size: $font-size-mediumer;
 }
 
 p {
